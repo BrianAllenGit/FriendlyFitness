@@ -11,6 +11,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -52,5 +53,11 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+    public void mainScreen(View view){
+        Intent i = new Intent(getApplicationContext(), NuggetsActivity.class);
+        EditText temp = (EditText) findViewById(R.id.editText);
+        i.putExtra("EMAIL", temp.getText().toString());
+        startActivity(i);
     }
 }
