@@ -5,16 +5,16 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.View;
-import android.widget.EditText;
-import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
-import android.widget.TextView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+
 
 /**
  * Created by Brian on 3/29/2016.
  */
 public class NuggetsActivity extends AppCompatActivity {
-
+    private ListView mDrawerList;
+    private ArrayAdapter<String> mAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +24,8 @@ public class NuggetsActivity extends AppCompatActivity {
         String message = i.getStringExtra("EMAIL");
         //EditText test = (EditText) findViewById(R.id.edito);
         //test.setText(message);
+        mDrawerList = (ListView)findViewById(R.id.navList);
+        addDrawerItems();
     }
 
     @Override
@@ -41,5 +43,10 @@ public class NuggetsActivity extends AppCompatActivity {
     public void goTimer(View view){
         Intent i = new Intent(getApplicationContext(), TimerActivity.class);
         startActivity(i);
+    }
+    private void addDrawerItems() {
+        String[] osArray = { "Android", "iOS", "Windows", "OS X", "Linux" };
+        mAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, osArray);
+        mDrawerList.setAdapter(mAdapter);
     }
 }

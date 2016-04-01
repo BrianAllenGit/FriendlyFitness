@@ -8,4 +8,6 @@
     <string name="weekly_greeting">This week you\'ve...</string>
     <string name="today_plan">What are you doing today?</string>
     <string name="temp_text">Increased your 1 rep max for -exercise- to -weight- \n</string>
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
 </resources>
