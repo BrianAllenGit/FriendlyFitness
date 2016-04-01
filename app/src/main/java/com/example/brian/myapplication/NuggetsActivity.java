@@ -20,7 +20,7 @@ public class NuggetsActivity extends AppCompatActivity {
         setContentView(R.layout.nuggets_activity);
         Intent i = getIntent();
         String message = i.getStringExtra("EMAIL");
-        EditText test = (EditText) findViewById(R.id.edito);
-        test.setText(message);
+        //EditText test = (EditText) findViewById(R.id.edito);
+        //test.setText(message);
     }
 }

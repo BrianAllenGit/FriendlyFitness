@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">Friendly Fitness</string>
     <string name="action_settings">Settings</string>
+    <string name="log_workout">Log Workout</string>
+    <string name="open_timer">Timer</string>
+    <string name="view_history">View History</string>
+    <string name="create_workout">Create Workout</string>
+    <string name="weekly_greeting">This week you\'ve...</string>
+    <string name="today_plan">What are you doing today?</string>
+    <string name="temp_text">Increased your 1 rep max for -exercise- to -weight- \n</string>
 </resources>
