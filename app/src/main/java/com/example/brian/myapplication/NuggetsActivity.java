@@ -3,6 +3,7 @@ package com.example.brian.myapplication;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -22,5 +23,17 @@ public class NuggetsActivity extends AppCompatActivity {
         String message = i.getStringExtra("EMAIL");
         //EditText test = (EditText) findViewById(R.id.edito);
         //test.setText(message);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.sub_menu, menu);
+        return true;
+    }
+
+    @Override
+    public void onBackPressed(){
+
     }
 }
